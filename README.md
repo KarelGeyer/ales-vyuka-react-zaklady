@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# VYSVĚTLIVKY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Jak rozchodit projekt
 
-## Available Scripts
+Aby ti projekt fungoval, potřebuješ si nainstalovat [Nodejs Runtime](https://nodejs.org/en).
+Zároveň potřebuješ Npm nebo Yarn, což jsou správci balíčků, je v podstatě jedno , která si vybereš, yarn je rychlejší.
+Npm se nainstaluje automaticky při instalaci NodeJs, yarn si musíš nainstalovat zvlášť -> [instrukce k instalaci](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable).
+Úspěšné nainstalování Nodejs a npm ověříš tak, že klikneš na Windows tlačítko na klávesnici a napíše cmd, otevře se ti command prompt a do něj napíšeš:
 
-In the project directory, you can run:
+- node -v (měla by se ti zobrazit verze node)
+- npm nebo yarn -v (měla by se ti zobrazit verze npm nebo yarnu, dle toho co chceš používat)
 
-### `npm start`
+Je možné, že se ti verze neukážou, možná bude potřeba restartovat PC, aby to šlo.
+Poslední krok je otevřít si projekt v nějakém editoru - na frontend je dobrý VSCode a otevřít konzoli v rootu projektu viz. ![obrázek](./images/console-example.jpg).
+Jako první do konzole napíšeš npm install nebo yarn install a počkej, až se ti stáhnou a nainstalují potřeba závislosti projektu.
+Až to bude hotové tak už jen do konzole napíšeš npm start a projekt by se ti měl pomalu začít spouštět. Spustí se ti na [localhostu](http://localhost:3000/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Vysvětlivky k projektu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+V projektu jsou ukazáné naprosté základy reactu, než se je naučíš, měl bych stihnout pokračovat a dát ti něco komplexnějšího.
 
-### `npm test`
+- První co by tě mělo zajímat je složka komponents, React je naložený na komponentách, které můžeš využívat kdekoliv si zamaneš. To jakým způsobem se používají najdeš v souboru App.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Druhá věc, je samotné JSX, v základe jde v podstatě o rozšířené XML. Konkrétně je to zkratka pro Javascript XML. Umožňuje nám to psát HTML-like syntaxi přímo do javascriptích souborů. Můžeš si všimnout, že u některých souborů je koncovka .jsx, toho si moc nevšímej, můžeš používat i konvovku .js a nic by se nemělo změnit. JSX nám taky umožňuje psát javascriptí kód přímo do našeho "HTML", problematika je více popsaná v komponentách MovieCard.jsx a MovieCards.jsx
 
-### `npm run build`
+- Další základní věc, kterou je třeba pochopit jsou Props. Můžeš si všimnout, že všechny komponenty jsou vlastně jen Funkce a props jsou v podstatě jen její argumenty, které můžeš do komponenty poslat a pracovat s nimi. Nic víc, Více je vysvětlené v App.js a Header.jsx
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Do projektu jsem ti zapojil i dva základní Hooky, useState a useEffect. UseState je vysvětlený v komponentě Counter.jsx. UseEffect je vysvětlený v komponentě Timer a UserBoxes.jsx
